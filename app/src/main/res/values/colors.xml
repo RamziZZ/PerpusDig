@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparant">#00FFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="baby_blue">#F0F8FF</color>
+    <color name="hijautua">#256D85</color>
+    <color name="hijautelorasin">#8FE3CF</color>
+    <color name="biru">#1450A3</color>
+    <color name="birutua">#224587</color>
+    <color name="blue_ocean">#A8CFFB</color>
+    <color name="abu_muda">#9DB2BF</color>
+    <color name="abu_tua">#61677A</color>
+    <color name="abu_abu">#758694</color>
+    <color name="lightgrey">#999999</color>
+    <color name="merah">#EB2020</color>
+</resources>

@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".ui.perpustakaan.PerpustakaanAnggotaFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="#FFFFFF">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Linear untuk Judul -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                android:background="@color/biru">
+
+                <!-- Text Header -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Perpustakaan"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="21sp"/>
+            </LinearLayout>
+
+            <!-- Linear untuk Search Bar -->
+            <LinearLayout
+                android:layout_width="236dp"
+                android:layout_height="33dp"
+                android:background="@drawable/rec_searchbar"
+                android:orientation="horizontal"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="63dp"
+                android:clickable="false">
+
+                <ImageButton
+                    android:id="@+id/btn_search"
+                    android:layout_width="19dp"
+                    android:layout_height="27dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="13dp"
+                    android:src="@drawable/ic_search"
+                    app:tint="@color/biru"
+                    android:backgroundTint="@color/transparant"/>
+
+                <EditText
+                    android:id="@+id/txt_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:background="@color/transparant"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:hint="Cari buku atau penulis"
+                    android:textColorHint="@color/birutua"
+                    android:textColor="@color/birutua"
+                    android:textSize="13sp"
+                    android:textCursorDrawable="@drawable/custom_cursor"/>
+            </LinearLayout>
+        </FrameLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Konten Utama dengan NestedScrollView -->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Kategori Buku -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/rec_greyblue"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Kategori"
+                            android:textSize="15sp"
+                            android:textColor="#1E1E1E"
+                            android:fontFamily="@font/montserrat_semibold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cari buku berdasarkan kategori"
+                            android:textSize="13sp"
+                            android:textColor="@color/birutua"
+                            android:fontFamily="@font/montserrat_medium" />
+
+                        <!-- Kategori Button -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="5dp">
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/buku_fiksi"
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rec_babyblue"
+                                android:layout_marginEnd="8dp"
+                                android:text="Fiksi"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:textColor="@color/birutua"
+                                android:textAllCaps="false"
+                                android:gravity="start|center_vertical"
+                                android:paddingStart="10dp"/>
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/ensiklopedia"
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rec_babyblue"
+                                android:layout_marginEnd="8dp"
+                                android:text="Ensiklopedia"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:textColor="@color/birutua"
+                                android:textAllCaps="false"
+                                android:gravity="start|center_vertical"
+                                android:paddingStart="10dp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="5dp">
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/komik"
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rec_babyblue"
+                                android:layout_marginEnd="8dp"
+                                android:text="Komik"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:textColor="@color/birutua"
+                                android:textAllCaps="false"
+                                android:gravity="start|center_vertical"
+                                android:paddingStart="10dp"/>
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/filsafat"
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rec_babyblue"
+                                android:layout_marginEnd="8dp"
+                                android:text="Filsafat"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:textColor="@color/birutua"
+                                android:textAllCaps="false"
+                                android:gravity="start|center_vertical"
+                                android:paddingStart="10dp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="5dp">
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/biografi_otobiografi"
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rec_babyblue"
+                                android:layout_marginEnd="8dp"
+                                android:text="Biografi &amp; Otobiografi"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:textColor="@color/birutua"
+                                android:textAllCaps="false"
+                                android:gravity="start|center_vertical"
+                                android:paddingStart="10dp"/>
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/hukum_politik"
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rec_babyblue"
+                                android:layout_marginEnd="8dp"
+                                android:text="Hukum &amp; Politik"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:textColor="@color/birutua"
+                                android:textAllCaps="false"
+                                android:gravity="start|center_vertical"
+                                android:paddingStart="10dp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="5dp">
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/bisnis"
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rec_babyblue"
+                                android:layout_marginEnd="8dp"
+                                android:text="Bisnis"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:textColor="@color/birutua"
+                                android:textAllCaps="false"
+                                android:gravity="start|center_vertical"
+                                android:paddingStart="10dp"/>
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/self_improvement"
+                                android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rec_babyblue"
+                                android:layout_marginEnd="8dp"
+                                android:text="Self improvement"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:textColor="@color/birutua"
+                                android:textAllCaps="false"
+                                android:gravity="start|center_vertical"
+                                android:paddingStart="10dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/cardlist"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:listitem="@layout/card_perpus"/>
+
+                        <ProgressBar
+                            android:id="@+id/load_data"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:visibility="gone"/>
+
+                        <LinearLayout
+                            android:id="@+id/layout_noresult"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tidak ada hasil untuk"
+                                android:textSize="15sp"
+                                android:textColor="@color/abu_abu"
+                                android:fontFamily="@font/montserrat_medium"/>
+
+                            <TextView
+                                android:id="@+id/buku"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:textSize="15sp"
+                                android:textColor="@color/abu_abu"
+                                android:fontFamily="@font/montserrat_medium"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

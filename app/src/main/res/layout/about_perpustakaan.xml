@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".ui.beranda.AboutPerpustakaanFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="#FFFFFF">
+
+        <!-- Linear untuk Judul -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@color/biru">
+
+            <!-- Tombol Back -->
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="25dp"
+                android:clickable="true"
+                android:contentDescription="Kembali"
+                android:src="@drawable/ic_back_bluesky"
+                android:background="?android:selectableItemBackground"/>
+
+            <!-- Text Header -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="PerpusDig"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="19sp"/>
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Konten Utama dengan NestedScrollView -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Header Gambar dan Alamat -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/rec_greyblue">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:src="@drawable/img_gedungperpus"
+                    android:contentDescription="Gedung Perpustakaan"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@color/biru">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Jl. Mastrip II no 230, Kel. Ganung Kidul, Kec. Nganjuk, Jawa Timur"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/montserrat_semibold"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="16dp"
+                    android:text="Gedung Layanan Perpustakaan\nKabupaten Nganjuk"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/montserrat_medium"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:text="Dinas Kearsipan dan Perpustakaan -\nPemerintahan Kab. Nganjuk"
+                    android:textSize="14sp"
+                    android:textColor="@color/biru"
+                    android:fontFamily="@font/montserrat_medium"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/ic_jam"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="15dp"
+                        android:text="Jam Buka"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="@color/abu_abu"
+                        android:textSize="13sp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="65dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Senin - Kamis : Pukul 08.00 - 15.30 WIB\nJumat : pukul 07.30 - 14.30 WIB\nSabtu - Minggu : Pukul 08.00 - 16.00 WIB"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:lineSpacingExtra="3dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/ic_location"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="15dp"
+                        android:text="Alamat"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="@color/abu_abu"
+                        android:textSize="13sp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="65dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Perpustakaan Daerah Kabupaten Nganjuk\nJl. Mastrip II no 230\nNganjuk, Ganung Kidul 64419\nAkreditasi B\nNPP 3518003B1007423"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:lineSpacingExtra="3dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/ic_telp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="15dp"
+                        android:text="Kontak Kami"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="@color/abu_abu"
+                        android:textSize="13sp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="65dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Kelompok C2 Semester 3\nTelp. 08980098155\nEmail : tifpolije.c@gmail.com"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:lineSpacingExtra="3dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="40dp"
+                    android:gravity="center"
+                    android:text="Hak Cipta :\n© 2024 Kelompok C2 Semester 3\nTeknik Informatika - Politeknik Negeri Jember"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:textColor="@color/biru"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

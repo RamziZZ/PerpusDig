@@ -1,0 +1,17 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Warna latar belakang kotak pencarian -->
+    <solid android:color="#FFFFFF" />
+
+    <!-- Radius untuk sudut membulat -->
+    <corners android:radius="10sp" />
+
+    <!-- Efek bayangan (drop shadow) -->
+    <shadowLayer
+        android:radius="4dp"
+        android:color="#000000" /> <!-- Warna bayangan -->
+
+    <!-- Stroke untuk border jika diinginkan -->
+    <stroke
+        android:width="1dp"
+        android:color="#224587" /> <!-- Warna tepi -->
+</shape>

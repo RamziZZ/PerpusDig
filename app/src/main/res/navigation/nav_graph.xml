@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/openingFragment">
+
+    <fragment
+        android:id="@+id/openingFragment"
+        android:name="com.example.perpusdig.ui.openingpage.OpeningFragment"
+        android:label="opening_page"
+        tools:layout="@layout/opening_page" >
+        <action
+            android:id="@+id/action_openingFragment_to_openingFragment1"
+            app:destination="@id/openingFragment1" />
+    </fragment>
+    <fragment
+        android:id="@+id/openingFragment1"
+        android:name="com.example.perpusdig.ui.openingpage.OpeningFragment1"
+        android:label="opening_page1"
+        tools:layout="@layout/opening_page1" >
+        <action
+            android:id="@+id/action_openingFragment1_to_openingFragment2"
+            app:destination="@id/openingFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/openingFragment2"
+        android:name="com.example.perpusdig.ui.openingpage.OpeningFragment2"
+        android:label="opening_page2"
+        tools:layout="@layout/opening_page2" >
+        <action
+            android:id="@+id/action_openingFragment2_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_openingFragment2_to_regisUsnFragment"
+            app:destination="@id/regisUsnFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.perpusdig.ui.login.LoginFragment"
+        android:label="login"
+        tools:layout="@layout/login" >
+        <action
+            android:id="@+id/action_loginFragment_to_lupaPassFragment1"
+            app:destination="@id/lupaPassFragment1" />
+    </fragment>
+    <fragment
+        android:id="@+id/berandaFragment"
+        android:name="com.example.perpusdig.ui.beranda.BerandaFragment"
+        android:label="beranda"
+        tools:layout="@layout/beranda" >
+        <action
+            android:id="@+id/action_berandaFragment_to_aboutPerpustakaanFragment"
+            app:destination="@id/aboutPerpustakaanFragment" />
+        <action
+            android:id="@+id/action_berandaFragment_to_ebookListFragment"
+            app:destination="@id/ebookListFragment" />
+        <action
+            android:id="@+id/action_berandaFragment_to_detailEbookFragment"
+            app:destination="@id/detailEbookFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/perpustakaanAnggotaFragment"
+        android:name="com.example.perpusdig.ui.perpustakaan.PerpustakaanAnggotaFragment"
+        android:label="perpustakaan_anggota"
+        tools:layout="@layout/perpustakaan_anggota" >
+        <action
+            android:id="@+id/action_perpustakaanAnggotaFragment_to_detailBukuFragment"
+            app:destination="@id/detailBukuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aktivitasAnggotaFragment"
+        android:name="com.example.perpusdig.ui.aktivitas.AktivitasAnggotaFragment"
+        android:label="aktivitas_anggota"
+        tools:layout="@layout/aktivitas_anggota" />
+    <fragment
+        android:id="@+id/profilAnggotaFragment"
+        android:name="com.example.perpusdig.ui.profil.ProfilAnggotaFragment"
+        android:label="profil_nonanggota"
+        tools:layout="@layout/profil_nonanggota" >
+        <action
+            android:id="@+id/action_profilAnggotaFragment_to_editProfileAnggotaFragment"
+            app:destination="@id/editProfileAnggotaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutPerpustakaanFragment"
+        android:name="com.example.perpusdig.ui.beranda.AboutPerpustakaanFragment"
+        android:label="about_perpustakaan"
+        tools:layout="@layout/about_perpustakaan" />
+    <fragment
+        android:id="@+id/editProfileAnggotaFragment"
+        android:name="com.example.perpusdig.ui.profil.EditProfileAnggotaFragment"
+        android:label="edit_profil_anggota"
+        tools:layout="@layout/edit_profil_anggota" />
+    <fragment
+        android:id="@+id/detailBukuFragment"
+        android:name="com.example.perpusdig.ui.perpustakaan.DetailBukuFragment"
+        android:label="detail_buku"
+        tools:layout="@layout/detail_buku" />
+    <fragment
+        android:id="@+id/ebookListFragment"
+        android:name="com.example.perpusdig.ui.beranda.ListEbookFragment"
+        android:label="ebook_list"
+        tools:layout="@layout/ebook_list" >
+        <action
+            android:id="@+id/action_ebookListFragment_to_detailEbookFragment"
+            app:destination="@id/detailEbookFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailEbookFragment"
+        android:name="com.example.perpusdig.ui.beranda.DetailEbookFragment"
+        android:label="DetailEbookFragment" />
+    <fragment
+        android:id="@+id/perpustakaanNonAnggotaFragment"
+        android:name="com.example.perpusdig.ui.perpustakaan.PerpustakaanNonAnggotaFragment"
+        android:label="perpustakaan_nonanggota"
+        tools:layout="@layout/perpustakaan_nonanggota" />
+    <fragment
+        android:id="@+id/aktivitasNonAnggotaFragment"
+        android:name="com.example.perpusdig.ui.aktivitas.AktivitasNonAnggotaFragment"
+        android:label="aktivitas_nonanggota"
+        tools:layout="@layout/aktivitas_nonanggota" />
+    <fragment
+        android:id="@+id/profilNonAnggotaFragment"
+        android:name="com.example.perpusdig.ui.profil.ProfilNonAnggotaFragment"
+        android:label="ProfilNonAnggotaFragment" >
+        <action
+            android:id="@+id/action_profilNonAnggotaFragment_to_editProfileNonAnggotaFragment2"
+            app:destination="@id/editProfileNonAnggotaFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileNonAnggotaFragment2"
+        android:name="com.example.perpusdig.ui.profil.EditProfileNonAnggotaFragment"
+        android:label="edit_profil_nonanggota"
+        tools:layout="@layout/edit_profil_nonanggota" />
+    <fragment
+        android:id="@+id/regisAnggotaFragment"
+        android:name="com.example.perpusdig.ui.regis_anggota.RegisAnggotaFragment"
+        android:label="regis_anggota"
+        tools:layout="@layout/regis_anggota" />
+    <fragment
+        android:id="@+id/waitingRegisFragment"
+        android:name="com.example.perpusdig.ui.regis_anggota.WaitingRegisFragment"
+        android:label="waiting_regis"
+        tools:layout="@layout/regis_anggota_ditunda" />
+    <fragment
+        android:id="@+id/regisEmailFragment"
+        android:name="com.example.perpusdig.ui.register.RegisEmailFragment"
+        android:label="register_email"
+        tools:layout="@layout/register_email" />
+    <fragment
+        android:id="@+id/regisUsnFragment"
+        android:name="com.example.perpusdig.ui.register.RegisUsnFragment"
+        android:label="register_username"
+        tools:layout="@layout/register_username" >
+        <action
+            android:id="@+id/action_regisUsnFragment_to_regisEmailFragment"
+            app:destination="@id/regisEmailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lupaPassFragment2"
+        android:name="com.example.perpusdig.ui.lupapass.LupaPassFragment2"
+        android:label="lupa_password"
+        tools:layout="@layout/lupa_password" />
+    <fragment
+        android:id="@+id/lupaPassFragment1"
+        android:name="com.example.perpusdig.ui.lupapass.LupaPassFragment1"
+        android:label="lupa_password_email"
+        tools:layout="@layout/lupa_password_email" >
+        <action
+            android:id="@+id/action_lupaPassFragment1_to_lupaPassFragment2"
+            app:destination="@id/lupaPassFragment2" />
+    </fragment>
+</navigation>

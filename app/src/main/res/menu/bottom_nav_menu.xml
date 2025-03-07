@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/beranda"
+        android:icon="@drawable/baseline_home"
+        android:title="Beranda"/>
+    <item
+        android:id="@+id/library"
+        android:icon="@drawable/baseline_library"
+        android:title="Perpustakaan"/>
+    <item
+        android:id="@+id/activity"
+        android:icon="@drawable/baseline_activity"
+        android:title="Aktivitas"/>
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/baseline_account"
+        android:title="Profil"/>
+</menu>
